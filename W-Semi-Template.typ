@@ -65,11 +65,11 @@
 
     pagebreak()
 
-    #block(height: 100%)[
+    block(height: 100%)[
         #align(horizon)[ #outline() ]
     ]
 
-    #pagebreak()
+    pagebreak()
 
     body
 }
