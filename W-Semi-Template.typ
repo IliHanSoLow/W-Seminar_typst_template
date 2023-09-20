@@ -1,12 +1,12 @@
 #let project(title: "", author: "", school:"", location: "", subject:"", teacher:"", years: "", deadline: "", body) = {
 
-  set page(numbering: "1", number-align: center, header:[
+    set page(numbering: "1", number-align: center, header:[
       #align(center)[#set text(11pt)
-      #smallcaps(title)]])
-  set text(font: "Linux Libertine", lang: "de")
+                     #smallcaps(title)]])
+    set text(font: "Linux Libertine", lang: "de")
 
-  // Set paragraph spacing.
-  show par: set block(above: 1.2em, below: 1.2em)
+    // Set paragraph spacing.
+    show par: set block(above: 1.2em, below: 1.2em)
 
     set heading(numbering: "I.1")
     set par(leading: 0.75em)
@@ -65,5 +65,11 @@
 
     pagebreak()
 
-  body
+    #block(height: 100%)[
+        #align(horizon)[ #outline() ]
+    ]
+
+    #pagebreak()
+
+    body
 }
