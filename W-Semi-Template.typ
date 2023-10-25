@@ -1,18 +1,22 @@
 #let project(title: "", author: "", school:"", location: "", subject:"", teacher:"", years: "", deadline: "", body) = {
 
     set page(numbering: "1", number-align: center, header:[
-      #align(center)[#set text(11pt)
+      #align(center)[#set text(12pt)
                      #smallcaps(title)]])
     set text(font: "Linux Libertine", lang: "de")
 
     // Set paragraph spacing.
-    show par: set block(above: 1.2em, below: 1.2em)
+    show par: set block(above: 1.5em, below: 1.5em)
 
     set heading(numbering: "I.1")
     set par(leading: 0.75em)
 
     // Main body.
     set par(justify: true)
+
+    set page(
+        paper: "a4",
+        margin: (y: 3cm))
 
     grid(
         columns: (50%, 50%),
