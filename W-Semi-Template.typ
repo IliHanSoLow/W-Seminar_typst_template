@@ -14,6 +14,10 @@
     // Main body.
     set par(justify: true)
 
+    set page(
+        paper: "a4",
+        margin: (y: 3cm))
+
     grid(
         columns: (50%, 50%),
         align(left + horizon)[#school \ #location],
