@@ -1,15 +1,15 @@
 #let project(title: "", author: "", school:"", location: "", subject:"", teacher:"", years: "", deadline: "", body) = {
 
     set page(numbering: "1", number-align: center, header:[
-      #align(center)[#set text(11pt)
+      #align(center)[#set text(12pt)
                      #smallcaps(title)]])
     set text(font: "Linux Libertine", lang: "de")
 
     // Set paragraph spacing.
-    show par: set block(above: 1.2em, below: 1.2em)
+    show par: set block(above: 2em, below: 2em)
 
     set heading(numbering: "I.1")
-    set par(leading: 0.75em)
+    set par(leading: 1.5em)
 
     // Main body.
     set par(justify: true)
@@ -21,7 +21,7 @@
     )
     align(center)[#block(height: 20%, text(weight: 500, 1.75em, [
         #align(horizon)[SEMINARARBEIT \
-                        #text(size: 11pt, weight: 400, [aus dem W-Seminar]) \
+                        #text(size: 12pt, weight: 400, [aus dem W-Seminar]) \
                         #subject]]))]
 
     block(height: 5%)
@@ -59,7 +59,7 @@
         align(left)[Abgabe beim Oberstufenkoordiantor am:],
         align(left)[..............................]
     )
-    block(height: 13%, width: 100%)[
+    block(height: 7%, width: 100%)[
         #align(right + bottom)[............................................................ \
                                Unterschrift des Kursleiters]]
 
@@ -72,4 +72,23 @@
     pagebreak()
 
     body
+
+    pagebreak()
+
+    bibliography("sources.yml", style: "ieee")
+
+    pagebreak()
+    align(center + horizon,
+          grid(
+              columns: (auto, auto, auto),
+              rows: (50%, auto),
+              align(bottom + right)[............................................., den],
+              align(bottom + left)[.........................],
+              align(bottom + center)[#h(0.5cm).....................................................],
+              align(horizon + center)[#v(1.5em)Ort],
+              align(horizon + center)[#v(1.5em)Datum],
+              align(horizon + center)[#v(1.5em)#h(0.5cm)Unterschrift des Schülers]
+        )
+    )
+
 }
