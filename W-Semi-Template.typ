@@ -84,17 +84,18 @@
     bibliography("sources.yml", style: "ieee")
 
     pagebreak()
-    align(center + horizon,
-          grid(
-              columns: (auto, auto, auto),
-              rows: (50%, auto),
-              align(bottom + right)[............................................., den],
-              align(bottom + left)[.........................],
-              align(bottom + center)[#h(0.5cm).....................................................],
-              align(horizon + center)[#v(1.5em)Ort],
-              align(horizon + center)[#v(1.5em)Datum],
-              align(horizon + center)[#v(1.5em)#h(0.5cm)Unterschrift des Schülers]
-        )
+    align(center + horizon,[
+        #text(weight: 700)[
+        Ich erkläre hiermit, dass die Seminararbeit ohne fremde Hilfe angefertigt und nur die im Literaturverzeichnis aufgeführten Quellen und Hilfsmittel benutzt habe.]
+        #grid(
+            columns: (auto, auto, auto),
+            rows: (auto, auto, auto),
+            align(bottom + right)[#v(1em)............................................., den],
+            align(bottom + left)[#v(1em).........................],
+            align(bottom + center)[#h(0.5cm).....................................................],
+            align(horizon + center)[#v(1.5em)Ort],
+            align(horizon + center)[#v(1.5em)Datum],
+            align(horizon + center)[#v(1.5em)#h(0.5cm)Unterschrift des Schülers]
+        )]
     )
-
 }
