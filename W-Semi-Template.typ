@@ -1,5 +1,7 @@
 #let project(title: "", author: "", school:"", location: "", subject:"", teacher:"", years: "", deadline: "", body) = {
 
+    show bibliography: set heading(numbering: "I.1")
+
     set page(numbering: "1", number-align: center, header:[
       #align(center)[#set text(12pt)
                      #smallcaps(title)]])
