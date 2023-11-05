@@ -60,7 +60,7 @@
     grid(
         columns: (60%, auto),
         rows: (2%, 2%),
-        align(left)[Gesamtbewerbung ((3x schriftlich + 1x mündlich) : 2):],
+        align(left)[Gesamtbewertung ((3x schriftlich + 1x mündlich) : 2):],
         align(left)[.......... Punkte],
         align(left)[Abgabe beim Oberstufenkoordiantor am:],
         align(left)[..............................]
