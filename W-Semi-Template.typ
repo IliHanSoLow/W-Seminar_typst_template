@@ -7,6 +7,7 @@
                      #smallcaps(title)]])
     set text(font: "Linux Libertine", lang: "de")
 
+    show figure.caption: set text(8pt)
     // Set paragraph spacing.
     show par: set block(above: 2em, below: 2em)
 
